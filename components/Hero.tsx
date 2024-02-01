@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ReactElement, useContext, useEffect, useRef } from 'react';
+import { ReactElement, useContext, useRef } from 'react';
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { ScrollContext } from './Providers/ScrollProvider';
-import { renderCanvas } from './renderCanvas';
+// import { renderCanvas } from './renderCanvas';
 
 export default function Hero(): ReactElement {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -18,9 +18,9 @@ export default function Hero(): ReactElement {
     progress = Math.min(1, scrollY / elContainer.clientHeight);
   }
 
-  useEffect(() => {
-    renderCanvas();
-  }, []);
+  // useEffect(() => {
+  //   renderCanvas();
+  // }, []);
 
   return (
     <div>
@@ -63,7 +63,7 @@ export default function Hero(): ReactElement {
           </div>
         </div>
       </div>
-      <canvas className="bg-skin-base pointer-events-none absolute inset-0" id="canvas"></canvas>
+      {/* <canvas className="bg-skin-base pointer-events-none absolute inset-0" id="canvas"></canvas> */}
     </div>
   );
 }
