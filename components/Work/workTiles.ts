@@ -13,34 +13,34 @@ export const workTiles: WorkTile[] = [
     description: `Here are things`,
     title: `I've worked on`,
     image: {
-      src: '/static/images/aphex-apps.webp',
+      src: '/static/images/web-apps.webp',
       width: 600,
       height: 770,
     },
   },
   {
     description: 'I built',
-    title: 'Aphex Field',
+    title: 'FPL Mstr',
     image: {
-      src: '/static/images/field-app.webp',
+      src: '/static/images/fplmstr-webapp.webp',
       width: 600,
       height: 554,
     },
   },
   {
-    description: `I maintained`,
-    title: 'Aphex Planner',
+    description: `I built`,
+    title: 'ExamGPT',
     image: {
-      src: '/static/images/planner-app.webp',
+      src: '/static/images/examgptapp.webp',
       width: 600,
       height: 717,
     },
   },
   {
-    description: `I built`,
-    title: 'Aphex Publication',
+    description: `I built a`,
+    title: 'Forecasting Tool',
     image: {
-      src: '/static/images/publication-app.webp',
+      src: '/static/images/ilinaf-webapp.webp',
       width: 600,
       height: 717,
     },
