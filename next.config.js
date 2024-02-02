@@ -10,4 +10,7 @@ module.exports = withContentlayer({
     dirs: ['app', 'components', 'lib', 'layouts', 'scripts'],
   },
   swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
 });
