@@ -9,8 +9,21 @@ import LenisProvider from '@/components/Providers/LenisProvider';
 import ThemeProvider from '@/components/Providers/ThemeProvider';
 
 export const metadata = {
+  metadataBase: new URL('http://crepant.com'),
   title: 'Frank Omondi',
-  description: 'I build things for the web.',
+  description: 'My portfolio website',
+  openGraph: {
+    title: 'Frank Omondi',
+    description: 'My portfolio website',
+    image: '/opengraph-image.png',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@dofften',
+    title: 'Frank Omondi',
+    description: 'My portfolio website',
+    image: '/opengraph-image.png',
+  },
 };
 
 interface RootLayoutProps {
