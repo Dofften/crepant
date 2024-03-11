@@ -1,0 +1,84 @@
+---
+title: 'CI/CD with cPanel, FTP and GitHub Actions: Level Up Your Deployment Game'
+date: '2024-03-09'
+tags: ['CI/CD', 'DevOps', 'Deployment', 'GitHub Actions']
+draft: false
+author: 'Frank Omondi'
+summary: 'A guide on how to implement CI/CD in your projects'
+---
+
+# Overview
+
+<TOCInline toc={props.toc} exclude="Overview" toHeading={2} />
+
+# Introduction
+
+Yo, fellow code wizards! Let's talk about **CI/CD**, the magic spell that can seriously **boost your deployment workflow**. We're talking **continuous integration and continuous deployment**, the dynamic duo of modern DevOps practices.
+Now, you might be thinking, "CI/CD sounds cool, but I'm using **cPanel and FTP**. Can I still join the party?" You bet your sweet syntax you can! In this post, we'll explore how to **integrate CI/CD with your trusty cPanel and FTP setup using GitHub Actions.**
+
+# Why CI/CD Rocks Your World
+
+Imagine this: you push your code to GitHub, and like magic, it gets **automatically tested, built, and deployed** to your live server. No more manual FTP shenanigans, no more deployment headaches. That's the power of CI/CD.
+
+Here's why you'll love it:
+- **Faster deployments:** Say goodbye to tedious manual processes and hello to lightning-fast deployments.
+- **Reduced errors:** Automated testing catches bugs before they hit production, minimizing those "oh no!" moments.
+- **Improved collaboration:** Everyone on your team can see the deployment status, making collaboration smoother than ever.
+- **Increased productivity:** Spend less time deploying and more time coding awesome stuff.
+
+# Setting Up the CI/CD Pipeline with GitHub Actions
+
+Alright, let's get down to business. Here's how to set up a CI/CD pipeline with cPanel, FTP, and GitHub Actions:
+
+### 1. Create a GitHub Actions Workflow:
+
+This YAML file defines the steps your pipeline will follow. Check out this example:
+```YAML
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.19.0
+
+      - name: 🔨 Install dependencies and Build Project
+        run: |
+          npm install
+          npm run build
+
+      - name: 📂 Sync files and deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ftp.yoursite.com
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+```
+On your project root, save it inside `.github/workflows/` as `filename.yml`
+### 2. Store Your FTP Credentials Securely:
+
+Don't hardcode your FTP username and password in the workflow file. Use GitHub Secrets to store them securely.
+
+### 3. Configure the FTP Deploy Action:
+
+This action will connect to your FTP server and upload the built files. Make sure to specify the correct server address, username, and password.
+
+### 4. Push Your Code and Watch the Magic Happen:
+
+Once you push your code to the main branch, GitHub Actions will kick in, running the workflow you defined. Your code will be automatically tested, built, and deployed to your cPanel server via FTP. Boom!
+
+# Wrapping Up
+
+CI/CD isn't just for fancy-schmancy setups. With a little bit of configuration, you can **leverage its power even with cPanel and FTP**. So, what are you waiting for? **Embrace the CI/CD revolution and take your deployment game to the next level!**

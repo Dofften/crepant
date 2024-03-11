@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
+    "dev2": "next dev",
     "dev": "contentlayer dev & next dev",
     "build": "next build",
     "postbuild": "yarn rss",
@@ -12,7 +13,7 @@
     "start": "NODE_ENV=production node server.js"
   },
   "engines": {
-    "node": "18"
+    "node": ">=18"
   },
   "dependencies": {
     "@dlarroder/playground": "1.10.0",
@@ -40,7 +41,6 @@
     "rehype-prism-plus": "1.6.3",
     "rehype-slug": "6.0.0",
     "remark": "14.0.3",
-    "sharp": " 0.32.6",
     "use-breakpoint": "4.0.1"
   },
   "devDependencies": {
