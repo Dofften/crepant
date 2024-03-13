@@ -30,7 +30,8 @@
     "gsap": "3.12.2",
     "logrocket": "6.0.2",
     "mdx-bundler": "9.2.1",
-    "next": "13.4.19",
+    "express": "^4.17.1",
+    "next": "14.0.4",
     "next-contentlayer": "0.3.4",
     "next-themes": "0.2.1",
     "react": "18.2.0",
@@ -82,5 +83,10 @@
   },
   "resolutions": {
     "strip-ansi": "6.0.1"
+  },
+  "overrides": {
+    "next-contentlayer": {
+      "next": "$next"
+    }
   }
 }
