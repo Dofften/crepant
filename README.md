@@ -4,7 +4,7 @@
 - **Deployment**: [Vercel](https://vercel.com)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Analytics**: [Logrocket](https://logrocket.com/)
-- **Content**: [MDX](https://mdxjs.com/) with [Contentlayer](https://www.contentlayer.dev/)
+- **Content**: [MDX](https://mdxjs.com/)
 
 ## Running Locally
 
@@ -22,10 +22,10 @@ git clone git@github.com:Dofften/crepant.git
 cd crepant
 ```
 
-3. Install yarn packages
+3. Install dependencies
 
 ```bash
-yarn
+bun install
 ```
 
 1. Create a `.env.local` file following the `.env.example`
@@ -46,7 +46,7 @@ SPOTIFY_CLIENT_ID=<Your env>
 6. Run the development server
 
 ```bash
-yarn dev
+bun run dev
 ```
 
 ## Contributing
