@@ -1,9 +1,14 @@
-import Projects from '@/components/Projects/Projects';
-import MainLayout from '@/layouts/MainLayout';
+import MainLayout from 'app/components/layouts/main-layout';
+import Projects from 'app/projects/projects';
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'Projects - Frank Omondi',
   description: 'My Projects - Frank Omondi',
+=======
+  title: 'Projects',
+  description: 'My Projects - Dale Larroder',
+>>>>>>> 19eaa5af46a9ecf1ad24aaf91d3ef6afbafb6083
 };
 
 export default function Page() {

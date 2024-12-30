@@ -1,31 +1,23 @@
-import ListLayout from '@/layouts/MDX/ListLayout';
-import MainLayout from '@/layouts/MainLayout';
-import { sortedBlogPost } from '@/lib/utils/contentlayer';
-import { POSTS_PER_PAGE } from '@/types/default';
-import { allBlogs } from 'contentlayer/generated';
+import MainLayout from '../components/layouts/main-layout';
+import { BlogPosts } from '../components/posts';
+import { getBlogPosts } from './utils';
 
 export const metadata = {
   title: 'Blog - Frank Omondi',
   description: 'My Blogs - Frank Omondi',
 };
 
-export default function Blog() {
-  const activePosts = allBlogs.filter((p) => p.draft === false);
-  const posts = sortedBlogPost(activePosts);
-  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE);
-  const pagination = {
-    currentPage: 1,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
-  };
+export default function Page() {
+  const posts = getBlogPosts();
 
   return (
     <MainLayout>
-      <ListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="Blog"
-      />
+      <section>
+        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+          Blog
+        </h1>
+        <BlogPosts posts={posts} />
+      </section>
     </MainLayout>
   );
 }
