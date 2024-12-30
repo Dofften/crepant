@@ -8,13 +8,8 @@ const contentPath = path.join(process.cwd(), 'app', 'uses', 'content.mdx');
 const { content } = readMDXFile(contentPath);
 
 export const metadata = {
-<<<<<<< HEAD
-  title: 'Uses - Frank Omondi',
-  description: 'What I Use - Frank Omondi',
-=======
   title: 'Uses',
-  description: 'What I use',
->>>>>>> 19eaa5af46a9ecf1ad24aaf91d3ef6afbafb6083
+  description: 'What I Use',
 };
 
 export default function Page() {
