@@ -9,32 +9,22 @@ import ThemeProvider from 'app/components/providers/ThemeProvider';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
-<<<<<<< HEAD
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL('http://crepant.com'),
   title: 'Frank Omondi',
   description: 'My portfolio website',
   openGraph: {
     title: 'Frank Omondi',
     description: 'My portfolio website',
-    image: '/opengraph-image.png',
+    images: '/opengraph-image.png',
   },
   twitter: {
     card: 'summary_large_image',
     site: '@dofften',
     title: 'Frank Omondi',
     description: 'My portfolio website',
-    image: '/opengraph-image.png',
+    images: '/opengraph-image.png',
   },
-=======
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Dale Larroder',
-    default: 'Dale Larroder',
-  },
-  description: 'I build things for the web.',
-  metadataBase: new URL('https://dalelarroder.com'),
->>>>>>> 19eaa5af46a9ecf1ad24aaf91d3ef6afbafb6083
 };
 
 interface RootLayoutProps {

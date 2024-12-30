@@ -2,17 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-<<<<<<< HEAD:components/Hero.tsx
-import { ReactElement, useContext, useRef } from 'react';
-import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
-import { ScrollContext } from './Providers/ScrollProvider';
-// import { renderCanvas } from './renderCanvas';
-=======
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { ScrollContext } from '../providers/ScrollProvider';
-import { renderCanvas } from './renderCanvas';
->>>>>>> 19eaa5af46a9ecf1ad24aaf91d3ef6afbafb6083:app/components/hero/hero.tsx
+// import { renderCanvas } from './renderCanvas';
 
 export default function Hero() {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -31,14 +24,7 @@ export default function Hero() {
 
   return (
     <div>
-<<<<<<< HEAD:components/Hero.tsx
-      <h1 className="sr-only">Hello I'm Frank Omondi, I'm a software developer.</h1>
-=======
-      <h1 className="sr-only">
-        Hello I&apos;m Dale Larroder, I&apos;m a software developer, and I love building things for
-        the web.
-      </h1>
->>>>>>> 19eaa5af46a9ecf1ad24aaf91d3ef6afbafb6083:app/components/hero/hero.tsx
+      <h1 className="sr-only">Hello I&apos;m Frank Omondi, I&apos;m a software developer.</h1>
       <div className="relative z-10 flex h-[calc(100vh-81px)] items-center md:h-[calc(100vh-116px)]">
         <div className="mx-auto w-screen max-w-3xl px-4 sm:px-9 xl:max-w-5xl xl:px-0">
           <div className="-mt-36">

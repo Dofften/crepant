@@ -1,28 +1,18 @@
 import Link from 'next/link';
 // import { Suspense } from 'react';
 import { AiFillLinkedin } from 'react-icons/ai';
-<<<<<<< HEAD:components/Footer.tsx
-import { FaGithub, FaTwitter } from 'react-icons/fa';
-import SectionContainer from './SectionContainer';
-// import NowPlaying from './Spotify/NowPlaying';
-=======
-import { FaGithub, FaSpotify, FaSteam } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { siteMetadata } from '../metadata';
-import NowPlaying from '../spotify/now-playing';
+// import NowPlaying from '../spotify/now-playing';
 import SectionContainer from './section-container';
->>>>>>> 19eaa5af46a9ecf1ad24aaf91d3ef6afbafb6083:app/components/layouts/footer.tsx
 
 export default function Footer() {
   return (
     <SectionContainer>
       <footer>
         <div className="mb-0 flex flex-col justify-start space-y-1.5 space-x-0 py-10 text-gray-500 dark:text-gray-400">
-<<<<<<< HEAD:components/Footer.tsx
-          {/* <Suspense fallback="loading...">
-=======
-          <Suspense fallback={<div className="h-6" />}>
->>>>>>> 19eaa5af46a9ecf1ad24aaf91d3ef6afbafb6083:app/components/layouts/footer.tsx
+          {/* <Suspense fallback={<div className="h-6" />}>
             <NowPlaying />
           </Suspense> */}
           <div className="flex flex-col items-center space-y-2 text-sm sm:flex-row sm:justify-between sm:text-base">

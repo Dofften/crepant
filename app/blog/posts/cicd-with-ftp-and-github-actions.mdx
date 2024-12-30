@@ -1,6 +1,6 @@
 ---
 title: 'CI/CD with cPanel, FTP and GitHub Actions: Level Up Your Deployment Game'
-date: '2024-03-09'
+publishedAt: '2024-03-09'
 tags: ['CI/CD', 'DevOps', 'Deployment', 'GitHub Actions']
 draft: false
 author: 'Frank Omondi'
@@ -8,8 +8,6 @@ summary: 'A guide on how to implement CI/CD in your projects'
 ---
 
 # Overview
-
-<TOCInline toc={props.toc} exclude="Overview" toHeading={2} />
 
 # Introduction
 
@@ -21,6 +19,7 @@ Now, you might be thinking, "CI/CD sounds cool, but I'm using **cPanel and FTP**
 Imagine this: you push your code to GitHub, and like magic, it gets **automatically tested, built, and deployed** to your live server. No more manual FTP shenanigans, no more deployment headaches. That's the power of CI/CD.
 
 Here's why you'll love it:
+
 - **Faster deployments:** Say goodbye to tedious manual processes and hello to lightning-fast deployments.
 - **Reduced errors:** Automated testing catches bugs before they hit production, minimizing those "oh no!" moments.
 - **Improved collaboration:** Everyone on your team can see the deployment status, making collaboration smoother than ever.
@@ -33,6 +32,7 @@ Alright, let's get down to business. Here's how to set up a CI/CD pipeline with 
 ### 1. Create a GitHub Actions Workflow:
 
 This YAML file defines the steps your pipeline will follow. Check out this example:
+
 ```YAML
 name: Deploy
 
@@ -66,7 +66,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
 ```
+
 On your project root, save it inside `.github/workflows/` as `filename.yml`
+
 ### 2. Store Your FTP Credentials Securely:
 
 Don't hardcode your FTP username and password in the workflow file. Use GitHub Secrets to store them securely.

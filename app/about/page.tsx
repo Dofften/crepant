@@ -1,8 +1,9 @@
 import path from 'path';
-import { Fragment, Suspense } from 'react';
+import { Fragment } from 'react';
+// import { Suspense } from 'react';
 import { readMDXFile } from '../blog/utils';
 import { CustomMDX } from '../components/mdx';
-import TopTracks from '../components/spotify/top-tracks';
+// import TopTracks from '../components/spotify/top-tracks';
 import GithubContributions from './github-contributions/github-contributions';
 import Occupation from './occupation';
 
@@ -20,9 +21,9 @@ export default function Page() {
       <Occupation />
       <CustomMDX source={content} />
       <GithubContributions />
-      <Suspense fallback="loading..">
+      {/* <Suspense fallback="loading..">
         <TopTracks />
-      </Suspense>
+      </Suspense> */}
     </Fragment>
   );
 }
