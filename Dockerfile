@@ -13,7 +13,7 @@ RUN bun install
 COPY . .
 
 # Build the project
-RUN bun build
+RUN bun run build
 
 # Set the default command to serve the app
 CMD ["bun", "run", "serve"]
