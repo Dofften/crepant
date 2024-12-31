@@ -10,7 +10,7 @@ import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://crepant.com'),
+  metadataBase: new URL('https://crepant.com'),
   title: 'Frank Omondi',
   description: 'My portfolio website',
   openGraph: {
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@dofften',
+    creator: '@dofften',
     title: 'Frank Omondi',
-    description: 'My portfolio website',
+    description: 'Frank Omondi - Developer',
     images: '/opengraph-image.png',
   },
 };

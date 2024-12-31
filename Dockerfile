@@ -1,19 +1,9 @@
-FROM oven/bun:latest
+FROM node:18
 
-# Set the working directory
 WORKDIR /app
-
-# Copy package.json and bun.lockb for dependency installation
-COPY package.json bun.lockb ./
-
-# Install dependencies
-RUN bun install
-
-# Copy the rest of the application files
+COPY package*.json ./
+RUN npm install
 COPY . .
+RUN npm run build
 
-# Build the project
-RUN bun run build
-
-# Set the default command to serve the app
-CMD ["bun", "run", "serve"]
+CMD ["npm", "run", "serve"]
