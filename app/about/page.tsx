@@ -20,6 +20,7 @@ export default function Page() {
     <Fragment>
       <Occupation />
       <CustomMDX source={content} />
+      <br></br>
       <GithubContributions />
       {/* <Suspense fallback="loading..">
         <TopTracks />
